@@ -20,7 +20,7 @@ export default class TodoList extends React.Component {
     };
     addTodo = (todo) => {
         this.setState({
-            todos: [todo, ...this.state.todos]
+            todos: [ ...this.state.todos, todo]
         })
     }
 
