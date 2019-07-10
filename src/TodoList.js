@@ -1,6 +1,12 @@
 import React from 'react';
 import TodoForm from './TodoForm'
 import Todo from './Todo'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+
+
 //import { threadId } from 'worker_threads';
 /*
 1. add todo
@@ -19,10 +25,12 @@ export default class TodoList extends React.Component {
         toggleAllComplete: true
     };
     addTodo = (todo) => {
+        if(todo.toString().length > 0 )  {
         this.setState({
             todos: [ ...this.state.todos, todo]
         })
     }
+}
 
     
     toggleComplete = id => {
@@ -77,24 +85,29 @@ toggleAllTodo = () => {
             else if(this.state.todoToShow ==='complete') {
                 todos = this.state.todos.filter(todo => todo.complete);
             }
+            //Everything from here has been changed
         return(
             <div>
+            
                 <TodoForm onSubmit={this.addTodo}/>
                 {todos.map( todo =>(
                         <Todo 
-                            key={todo.id}  
+                            key={todo.id.toString()}  
                             toggleComplete={() => this.toggleComplete(todo.id)}
                             onDelete={() => this.handleDleteTodo(todo.id)}
                             todo = {todo} />
                 ))}
                 <div>todos left : {this.state.todos.filter(todo => !todo.complete).length}</div>
                 <div>
+                    <div>
                     <button 
-                        onClick={() => this.updateTodoToShow("all")}>all</button>
+                        onClick={() => this.updateTodoToShow("all")}>all</button></div>
+                    <div>
                     <button 
-                        onClick={() => this.updateTodoToShow("active")}>active</button>
+                        onClick={() => this.updateTodoToShow("active")}>active</button></div>
+                    <div>
                     <button 
-                        onClick={() => this.updateTodoToShow("complete")}>complete</button>
+                        onClick={() => this.updateTodoToShow("complete")}>complete</button></div>
                 </div>
                 {this.state.todos.some(todo => todo.complete) ? (
                 <div>

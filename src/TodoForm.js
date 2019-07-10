@@ -2,7 +2,9 @@ import React from 'react';
 //import { threadId } from 'worker_threads';
 //import generate from '@babel/generator';
 //Hello cheking git 
+import TextField from '@material-ui/core/TextField';
 import shortId from 'shortid'
+import { Typography } from '@material-ui/core';
 
 export default class TodoForm extends React.Component {
     state = {
@@ -27,15 +29,17 @@ export default class TodoForm extends React.Component {
     render() {
         return(
             <div>
-             <h1>Todo Application</h1>
+                <Typography component="h1" variant="h2">
+                    Todos
+                </Typography>
             <form onSubmit={this.handleSubmit}>
                 
-                <input 
+                <TextField
                 name = 'text'
                 value={this.state.text} 
                 onChange={this.handleChange}
                 placeholder="todos...."
-                />
+                 autoFocus={true} />
                 <button onClick={this.handleSubmit}>Add to do</button>
             </form>
             </div>
