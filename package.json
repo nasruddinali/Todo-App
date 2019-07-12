@@ -1,24 +1,20 @@
 {
-  "name": "my-app",
+  "name": "practical-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "3.3.2",
-    "@material-ui/icons": "3.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "shortid": "^2.2.14"
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-scripts": "1.1.5",
+    "shortid": "^2.2.13"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
+  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import"./index.css"
 import TodoList from "./TodoList";
 
 class App extends Component {
@@ -7,6 +8,17 @@ class App extends Component {
     count: 0
   };
 
+  increment = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+
+  decrement = () => {
+    this.setState({
+      count: this.state.count - 1
+    });
+  };
 
   render() {
     return (
