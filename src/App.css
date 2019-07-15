@@ -79,9 +79,10 @@
 }
 
 .tabtask{
+  display: "flex";
   display: inline-block;
   justify-content: center;
-  height: 10px;
+  height: 12px;
   background-color: gray;
 
   border-bottom: 1px  solid #222
@@ -89,5 +90,6 @@
 
 .tabtask :hover{
   height: 10px;
+  color: bisque;
   text-decoration: underline
 }
