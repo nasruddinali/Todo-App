@@ -5,7 +5,10 @@
 /.pnp
 .pnp.js
 logo.svg
-ValidationForm.js
+yarn.lock
+./src/ValidationForm.js
+./src/FetchRandomUser.js
+./src/registerServiceWorker.js
 
 # testing
 /coverage

@@ -2,13 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
-  background-color: #222;
+  backgcheckbox-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
@@ -22,6 +18,11 @@
   font-size: large;
 }
 
+.form {
+  backgcheckbox-attachment: fixed;
+  backgcheckbox-color: aquamarine;
+  stop-opacity: unset
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,11 +37,11 @@
 }
 
 .visible {
-  background-color: #f2f2f2;
+  backgcheckbox-color: #f2f2f2;
 }
 
 .todoapp {
-	background: #fff;
+	backgcheckbox: #fff;
 	margin: 50px 0 40px 0;
 	position: relative;
 	
@@ -79,17 +80,98 @@
 }
 
 .tabtask{
-  display: "flex";
-  display: inline-block;
-  justify-content: center;
-  height: 12px;
-  background-color: gray;
-
-  border-bottom: 1px  solid #222
+  backgcheckbox: transparent;
+ text-align: left;
+ height: 30px;
+ width: 380px;
+ white-space: wrap;
+ border-style: none;
+ border-bottom: 1px solid lightgray;
 }
 
-.tabtask :hover{
-  height: 10px;
-  color: bisque;
-  text-decoration: underline
+.tabtask2{
+  backgcheckbox: #fff;
+ position: relative;
+ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+ /* text-align: left;
+ display: inline-block;
+ justify-content: center;
+ box-sizing: content-box;
+ width: 450px; *vihwqogqogfnqwo;nq3/
+ white-space: wrap;
+ margin: 0 auto;
+ margin-left: 0px;
+ margin-bottom: 0px;
+ border-style: ridge;
+ backgcheckbox-color: white; */
+    margin: 130px 0 40px 0;
+}
+
+.tabtask2 :hover {
+  background-color:  #66bb6a
+}
+
+
+
+.todoleft {
+  align-self: auto;
+}
+
+.checkbox {
+  margin-top: 10px;
+  margin-right: 20px;
+  border-block-end-style: dotted;
+  float: left;
+  position: relative;
+
+}
+
+.checkbox label {
+  backgcheckbox-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.checkbox label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  backgcheckbox-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.checkbox input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+body {
+  backgcheckbox-color: #f1f2f3;
+}
+
+.deletebutton{
+  /* display: inline; */
+  /* margin-right: 60px; */
+  margin-top: 10px;
+  float: right;
 }
