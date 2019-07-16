@@ -24,7 +24,7 @@ export default class MyForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className='form'>
         <input
           name="name"
           value={this.state.name}

@@ -77,14 +77,16 @@ export default class TodoList extends React.Component {
       <div>
         <TodoForm onSubmit={this.addTodo} />
         {todos.map(todo => (
+          <div className= "tabtask2">
           <Todo
             key={todo.id}
             toggleComplete={() => this.toggleComplete(todo.id)}
             onDelete={() => this.handleDeleteTodo(todo.id)}
             todo={todo}
           />
+          </div>
         ))}
-        <div> todos left: {this.state.todos.filter(todo => !todo.complete).length} </div>
+        <div className='todoleft'> todos left: {this.state.todos.filter(todo => !todo.complete).length} </div>
         <div><button onClick={() => this.updateTodoToShow("all")}>all</button>
           <button onClick={() => this.updateTodoToShow("active")}>
             active
